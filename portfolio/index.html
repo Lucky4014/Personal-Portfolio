@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lucky sharma — AI Engineer & Full Stack Developer portfolio."
+    />
+    <title>Lucky Sharma | AI Engineer & Full Stack Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='50%25' r='60%25'%3E%3Cstop offset='0%25' stop-color='%23ff4fd8'/%3E%3Cstop offset='55%25' stop-color='%236b5cff'/%3E%3Cstop offset='100%25' stop-color='%2300d4ff'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='46' fill='url(%23g)'/%3E%3Cpath d='M33 65V35h14c9 0 14 5 14 12 0 6-3 10-9 11l10 15H54l-9-14h-5v14H33zm7-20h6c5 0 8-2 8-6s-3-6-8-6h-6v12z' fill='white'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="scrollProgress"></div>
+    </div>
+
+    <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+    <div class="bg-aurora" aria-hidden="true"></div>
+
+    <header class="nav glass">
+      <a class="nav__brand" href="#top" aria-label="Go to top">
+        <span class="nav__brandMark" aria-hidden="true"></span>
+        <span class="nav__brandText">Lucky</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <span class="btn__icon" aria-hidden="true">☾</span>
+          <span class="btn__text" data-theme-label>Dark</span>
+        </button>
+        <button class="btn btn--primary nav__menuBtn" id="menuBtn" type="button" aria-label="Open menu">
+          <span aria-hidden="true">Menu</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobileMenu glass" id="mobileMenu" hidden>
+      <div class="mobileMenu__header">
+        <span class="mobileMenu__title">Navigate</span>
+        <button class="btn btn--ghost" id="menuClose" type="button" aria-label="Close menu">
+          Close
+        </button>
+      </div>
+      <div class="mobileMenu__links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <aside class="socialDock glass" aria-label="Social links">
+      <a class="socialDock__icon" href="https://www.linkedin.com/in/lucky-sharma-795906259" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <span aria-hidden="true">in</span>
+      </a>
+      <a class="socialDock__icon" href="https://github.com/Lucky4014" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <span aria-hidden="true">⌂</span>
+      </a>
+      <a class="socialDock__icon" href="luckysharma4014@gmail.com" aria-label="Email">
+        <span aria-hidden="true">@</span>
+      </a>
+      <a class="socialDock__icon" href="tel:+919351402103" aria-label="Phone">
+        <span aria-hidden="true">✆</span>
+      </a>
+    </aside>
+
+    <main id="top">
+      <section class="hero container section" id="home" data-reveal>
+        <div class="hero__card glass">
+          <div class="hero__top">
+            <div class="avatar avatar--square" aria-label="Profile photo">
+              <div class="avatar__ring" aria-hidden="true"></div>
+              <div class="avatar__img">
+                <img
+                  src="picture/img.jpg"
+                  alt="Lucky Sharma"
+                  width="160"
+                  height="160"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+
+          <h1 class="hero__name">Lucky Sharma</h1>
+          <p class="hero__tagline">
+            <span class="hero__typingLabel">I’m</span>
+            <span class="hero__typing" id="typingText" aria-label="Typing roles"></span>
+            <span class="hero__caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero__intro">
+            Computer Science and Engeneering graduate, passionate about building scalable,
+            intelligent, and real-world impactful applications.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a
+              class="btn btn--ghost"
+              href="resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >View Resume</a>
+            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="container section" id="about" data-reveal>
+        <div class="sectionHead">
+          <h2>About</h2>
+          <p>
+            I build intelligent, end-to-end products—where strong engineering meets real-world impact.
+          </p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="glass card">
+            <h3 class="card__title">Who I am</h3>
+            <p class="muted">
+I’m a Computer Science and Engineering (CSE) graduate with a strong passion for <strong>Web Development</strong> and emerging technologies like <strong>Artificial Intelligence</strong>. 
+I enjoy building modern, responsive, and user-friendly web applications that solve real-world problems.
+I have a strong foundation in technologies like <strong>HTML, CSS, JavaScript, and C++,DSA, etc</strong>, and I’m continuously improving my skills in full-stack development. 
+I’ve worked on projects such as a personal portfolio, Spotify-inspired UI, and a Online Cousre, focusing on clean design, smooth user experience, and performance.
+I’m passionate about learning new technologies, building impactful projects, and growing as a developer.
+            </p>
+
+            <div class="pillRow">
+              <span class="pill">Problem-solving mindset</span>
+              <span class="pill">Product-focused engineering</span>
+            </div>
+          </div>
+
+          <div class="glass card">
+            <h3 class="card__title">Core strengths</h3>
+            <div class="bars" aria-label="Skill proficiency bars">
+              <div class="bar">
+                <div class="bar__top">
+                  <span>DSA</span><span class="muted">Advanced</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 80%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__top">
+                  <span>Full Stack Development</span><span class="muted">Advanced</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 86%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__top">
+                  <span>C++</span><span class="muted">Strong</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 82%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__top">
+                  <span>Frontend development</span><span class="muted">Strong</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 90%"></div></div>
+              </div>
+              <div class="bar">
+                <div class="bar__top">
+                  <span>Python developer</span><span class="muted">Strong</span>
+                </div>
+                <div class="bar__track"><div class="bar__fill" style="--w: 84%"></div></div>
+              </div>
+            </div>
+                  </div>
+        </div>
+      </section>
+
+      <section class="container section" id="skills" data-reveal>
+        <div class="sectionHead">
+          <h2>Skills</h2>
+          <p>Skilled in Frontend development and modern frontend engineering, with a focus on building scalable, high-performance, and user-friendly applications.</p>
+        </div>
+
+        <div class="skillsGrid">
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⌘</div>
+            <h3>Programming</h3>
+            <p class="muted">C++, Python</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⧉</div>
+            <h3>Web</h3>
+            <p class="muted">HTML, CSS, JavaScript, React.js, Node.js</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">◆</div>
+            <h3>Spring Boot</h3>
+            <p class="muted">Postman</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">✶</div>
+            <h3>AI / ML</h3>
+            <p class="muted">TensorFlow, NLP, LSTM, Pandas, NumPy</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⛁</div>
+            <h3>Databases</h3>
+            <p class="muted">MySQL, MongoDB</p>
+          </div>
+          <div class="skillCard glass">
+            <div class="skillCard__icon" aria-hidden="true">⎇</div>
+            <h3>Tools</h3>
+            <p class="muted">Git, GitHub</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="projects" data-reveal>
+        <div class="sectionHead">
+          <h2>Projects</h2>
+          <p>Real-world projects showcasing development and problem-solving skills.</p>
+        </div>
+
+        <div class="projectsGrid">
+          <article class="project glass" data-reveal>
+            <div class="project__media">
+              <div class="project__img project__img--shop" aria-label="ShopSphere project">
+                <div class="project__shine" aria-hidden="true"></div>
+                <span class="project__imgText">Editkaro</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>EditKaro – Dynamic Agency Website</h3>
+                <p class="muted">
+                  <strong>Tech stack:</strong> HTML, CSS, JavaScript, Google Apps Script
+                </p>
+                <p class="muted">
+                  Built a responsive website for a social media marketing and video editing agency with
+                  interactive UI, service showcase, and form integration.
+                </p>
+              </div>
+              <ul class="featureList">
+                <li>Interactive gallery for showcasing services</li>
+                <li>Responsive layout for all devices</li>
+                <li>Google Forms integration using Apps Script</li>
+                <li>Smooth UI/UX with animations</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Google Apps Script</span>
+                <span class="badge">Postman</span>
+              </div>
+               <div class="project__actions">
+          <a class="btn btn--ghost" href="https://editkaroin1.netlify.app/" target="_blank">Live</a>
+        </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal>
+            <div class="project__media">
+              <div class="project__img" aria-label="Project image placeholder">
+                <div class="project__shine" aria-hidden="true"></div>
+                <span class="project__imgText">Simon Game</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Simon Game – Interactive Memory Game</h3>
+                <p class="muted">
+            <strong>Tech stack:</strong> HTML, CSS, JavaScript, jQuery
+          </p>
+          <p class="muted">
+            Developed a browser-based game with dynamic color sequences, animations, and real-time user interaction.
+          </p>
+              </div>
+              <ul class="featureList">
+                <li>Dynamic sequence generation</li>
+                <li>Real-time input validation</li>
+                <li>Animations and sound effects</li>
+                <li>Score tracking system</li>
+              </ul>
+              <div class="badges">
+                <span class="badge">JavaScript</span>
+                <span class="badge">jQuery</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--ghost" href="https://simongame786.netlify.app/" target="_blank">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal>
+            <div class="project__media">
+              <div class="project__img project__img--alt" aria-label="Project image placeholder">
+                <div class="project__shine" aria-hidden="true"></div>
+                <span class="project__imgText">Course Platform</span>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__top">
+                <h3>Online Course Platform – Full Stack Application</h3>
+                 <p class="muted">
+                 <strong>Tech stack:</strong> React, Node.js (Express), MongoDB, JWT Authentication, Razorpay (Test Mode)
+                 </p>
+                <p class="muted">
+                 Developed a complete full-stack e-learning platform where users can explore, enroll, and access courses,
+                 while admins manage course content, users, and enrollments.
+                </p>
+              </div>
+              <ul class="featureList">
+               <li>Secure user authentication with JWT (Login, Register, Forgot Password)</li>
+               <li>Course browsing with search, filter, and detailed course pages</li>
+               <li>Seamless enrollment system with Razorpay payment integration</li>
+               <li>Dynamic learning system with modules, lessons, and video playback</li>
+               <li>Progress tracking with completion percentage</li>
+               <li>Admin panel for course, module, and user management</li>
+               <li>Backend APIs for handling users, courses, and payments</li>
+               <li>Email notifications for registration and enrollment</li>
+              </ul>
+              <div class="badges">
+                 <span class="badge">React</span>
+                 <span class="badge">Node.js</span>
+                 <span class="badge">Express</span>
+                 <span class="badge">MongoDB</span>
+                 <span class="badge">JWT</span>
+                 <span class="badge">Razorpay</span>
+                 <span class="badge">REST API</span>
+              </div>
+              <div class="project__actions">
+                <a class="btn btn--ghost" href="https://github.com/Lucky4014/Online-Course-Platform" target="_blank" rel="noreferrer">Github</a>
+              </div>
+            </div>
+          </article>
+
+      </section>
+
+      <section class="container section" id="why-hire-me" data-reveal>
+        <div class="sectionHead">
+          <h2>Why Hire Me?</h2>
+          <p>Driven by strong fundamentals, real-world project experience, and a commitment to building clean, scalable, and production-ready solutions.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="glass card">
+            <h3 class="card__title">Strong problem-solving</h3>
+            <p class="muted">I break down complex requirements, optimize for clarity, and ship maintainable solutions.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Real-world projects</h3>
+            <p class="muted">From AI chatbots to healthcare tools, I focus on reliability, UX, and measurable outcomes.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">AI + Full-stack combo</h3>
+            <p class="muted">I can build the model, the API, and the product UI—end-to-end.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Quick learner</h3>
+            <p class="muted">I adapt fast, learn new tools confidently, and iterate based on feedback and results.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Clean engineering</h3>
+            <p class="muted">Readable code, consistent patterns, and user-first design decisions.</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Ownership mindset</h3>
+            <p class="muted">I care about the whole product: performance, accessibility, and user experience.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="education" data-reveal>
+        <div class="sectionHead">
+          <h2>Education</h2>
+          <p>Academic performance + consistent growth.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timelineItem glass">
+            <div class="timelineItem__dot" aria-hidden="true"></div>
+            <div class="timelineItem__content">
+              <h3>JECRC University</h3>
+              <p class="muted">B.Tech CSE • GPA-7.05</p>
+            </div>
+          </div>
+          <div class="timelineItem glass">
+            <div class="timelineItem__dot" aria-hidden="true"></div>
+            <div class="timelineItem__content">
+              <h3>Venus public School</h3>
+              <p class="muted">1 Division</p>
+            </div>
+          </div>
+          <div class="timelineItem glass">
+            <div class="timelineItem__dot" aria-hidden="true"></div>
+            <div class="timelineItem__content">
+              <h3>SEM CBSE School</h3>
+              <p class="muted">1 Division</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="experience" data-reveal>
+        <div class="sectionHead">
+          <h2>Experience</h2>
+          <p>Practical learning, development skills, and real-world exposure.</p>
+        </div>
+
+        <div class="glass card">
+          <div class="split">
+            <div>
+              <h3 class="card__title">Web Development Intern — VaultofCodes</h3>
+              <p class="muted">
+                 Completed a 1-month virtual internship focused on web development, <br> where I built 
+                  responsive websites and improved my understanding of modern frontend technologies.
+              </p>
+            </div>
+            <div class="impact">
+              <div class="impact__item">
+                <div class="impact__num">1 Mo</div>
+                <div class="impact__label">Internship Duration</div>
+              </div>
+              <div class="impact__item">
+                <div class="impact__num">3+</div>
+                <div class="impact__label">Project Built</div>
+              </div>
+              <div class="impact__item">
+                <div class="impact__num">JavaScript</div>
+                <div class="impact__label">Core Skills</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="certifications" data-reveal>
+        <div class="sectionHead">
+          <h2>Certifications</h2>
+          <p>Validated skills across cloud and AI.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="glass card">
+            <h3 class="card__title">Web Development Course</h3>
+            <p class="muted">HTML, CSS, JavaScript (Udemy)</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Certifications & Achievements</h3>
+            <p class="muted">Industry exposure, certifications, and practical experience.</p>
+          </div>
+          <div class="glass card">
+             <h3 class="card__title">Relational Databases & SQL</h3>
+             <p class="muted">Udemy — Queries, Joins, Normalization, DB Design</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">AIAMMS Tech Event</h3>
+            <p class="muted">AI, Mechatronics & Advanced Systems exposure</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Google Cloud Career Readiness</h3>
+            <p class="muted">Cloud fundamentals and industry practices</p>
+          </div>
+          <div class="glass card">
+            <h3 class="card__title">Smart India Hackathon (SIH)</h3>
+            <p class="muted">National-level problem solving & innovation</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section" id="contact" data-reveal>
+        <div class="sectionHead">
+          <h2>Contact</h2>
+          <p>Let’s build something exceptional together.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="glass card">
+            <h3 class="card__title">Reach me</h3>
+            <div class="contactList">
+              <a class="contactItem" href="luckysharma4014@gmail.com">
+                <span class="contactItem__k">Email</span>
+                <span class="contactItem__v">luckysharma4014@gmail.com</span>
+              </a>
+              <a class="contactItem" href="tel:+919351402103">
+                <span class="contactItem__k">Phone</span>
+                <span class="contactItem__v">+91 9351402103</span>
+              </a>
+              <a class="contactItem" href="https://www.linkedin.com/in/lucky-sharma-795906259/" target="_blank" rel="noreferrer">
+                <span class="contactItem__k">LinkedIn</span>
+                <span class="contactItem__v">linkedin.com/in/lucky-sharma-795906259/</span>
+              </a>
+              <a class="contactItem" href="https://github.com/Lucky4014" target="_blank" rel="noreferrer">
+                <span class="contactItem__k">GitHub</span>
+                <span class="contactItem__v">github.com/Lucky4014</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="glass card form" id="contactForm" autocomplete="on" novalidate>
+            <h3 class="card__title">Send a message</h3>
+            <input
+              type="text"
+              name="_honey"
+              class="form__hp"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Name</span>
+                <input class="field__input" name="name" placeholder="Your name" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" placeholder="you@email.com" required />
+              </label>
+            </div>
+            <label class="field">
+              <span class="field__label">Subject</span>
+              <input class="field__input" name="subject" placeholder="What’s this about?" required />
+            </label>
+            <label class="field">
+              <span class="field__label">Message</span>
+              <textarea class="field__input field__textarea" name="message" rows="6" placeholder="Write your message..." required></textarea>
+            </label>
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Send</button>
+              <button class="btn btn--ghost" type="reset">Reset</button>
+            </div>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer container">
+        <div class="footer__inner glass">
+          <div class="footer__left">
+            <div class="footer__brand">Lucky Sharma</div>
+            <div class="footer__muted">AI Engineer • Full Stack Developer</div>
+          </div>
+          <div class="footer__right">
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#top">Back to top</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <button class="toTop glass" id="toTop" type="button" aria-label="Back to top" hidden>
+      ↑
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
